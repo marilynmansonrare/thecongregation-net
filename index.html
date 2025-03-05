@@ -2,60 +2,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Congregation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Baskerville:wght@500;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            background-color: #181818;
-            color: #FFFFFF;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Baskerville', serif;
-            text-transform: uppercase;
-            text-align: center;
-        }
-        .message {
-            opacity: 0;
-            animation: fadeIn 3s forwards;
-        }
-        .copy {
-            margin-top: 40px;
-            font-size: 0.8em;
-            color: #DB291A;
-            cursor: pointer;
-            text-decoration: underline;
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Congregation</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: 'Times New Roman', serif;
+      text-align: center;
+      padding: 20% 0;
+      font-size: 24px;
+    }
+    #message {
+      display: none;
+      animation: flicker 2s infinite alternate;
+    }
+    @keyframes flicker {
+      0% { opacity: 1; }
+      100% { opacity: 0.5; }
+    }
+    input {
+      background: none;
+      border: none;
+      border-bottom: 1px solid white;
+      color: white;
+      text-align: center;
+      font-size: 24px;
+      outline: none;
+    }
+    button {
+      margin-top: 20px;
+      background: none;
+      border: 1px solid white;
+      padding: 10px 20px;
+      color: white;
+      cursor: pointer;
+    }
+    #coordinates {
+      display: none;
+      margin-top: 40px;
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+  </style>
 </head>
 <body>
-<script src="script.js"></script>
-<div class="container">
-    <div class="message">
-        THE FIRST STONE IS MOVED<br>
-        WAIT FOR THE NEXT REVELATION
+  <div>
+    <form id="passwordForm">
+      <input type="text" id="password" placeholder="Enter Password" required>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="message">
+      THE FIRST STONE IS MOVED<br>
+      COPY THE FOLLOWING CODE AND SEND IT TO:<br>
+      marilynmansonrare@gmail.com<br>
+      IG: @marilynmansonrare
     </div>
-    <div class="copy" onclick="copyCode()">COPY THE FOLLOWING CODE AND SEND US THROUGH MAIL OR DM<br> <br>
-        GEMATRIA 170113
-    </div>
-</div>
-
-<script>
-    function copyCode() {
-        const text = "GEMATRIA 170113";
-        navigator.clipboard.writeText(text).then(() => {
-            alert("Code copied to clipboard!");
-        });
-    }
-</script>
+    <div id="coordinates">26.6667N 80.0534W</div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
