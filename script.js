@@ -1,13 +1,16 @@
 
-document.getElementById("passwordForm").onsubmit = function(e) {
-  e.preventDefault();
-  const password = document.getElementById("password").value.toUpperCase();
-  if (password === "VII") {
-    document.getElementById("message").style.display = "block";
-    setTimeout(() => {
-      document.getElementById("coordinates").style.display = "block";
-    }, 3000);
-  } else {
-    alert("Wrong password.");
-  }
-};
+function handleKeyPress(e) {
+    if (e.key === 'Enter') {
+        handleSubmit();
+    }
+}
+
+function handleSubmit() {
+    const input = document.querySelector('input').value.toUpperCase();
+    const result = document.getElementById('result');
+    if (input === 'VII') {
+        result.textContent = 'Copy the following code and send us through DM on our IG: 7734';
+    } else {
+        result.textContent = 'INCORRECT CODE';
+    }
+}

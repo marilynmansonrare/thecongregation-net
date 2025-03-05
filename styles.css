@@ -1,0 +1,30 @@
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: serif;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    max-width: 700px;
+    padding: 20px;
+}
+input, button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+}
+button {
+    background: red;
+    border: none;
+    cursor: pointer;
+}

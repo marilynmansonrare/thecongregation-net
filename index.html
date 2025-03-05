@@ -2,65 +2,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Congregation</title>
-  <style>
-    body {
-      background: black;
-      color: white;
-      font-family: 'Times New Roman', serif;
-      text-align: center;
-      padding: 20% 0;
-      font-size: 24px;
-    }
-    #message {
-      display: none;
-      animation: flicker 2s infinite alternate;
-    }
-    @keyframes flicker {
-      0% { opacity: 1; }
-      100% { opacity: 0.5; }
-    }
-    input {
-      background: none;
-      border: none;
-      border-bottom: 1px solid white;
-      color: white;
-      text-align: center;
-      font-size: 24px;
-      outline: none;
-    }
-    button {
-      margin-top: 20px;
-      background: none;
-      border: 1px solid white;
-      padding: 10px 20px;
-      color: white;
-      cursor: pointer;
-    }
-    #coordinates {
-      display: none;
-      margin-top: 40px;
-      font-size: 14px;
-      letter-spacing: 2px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congregation Hidden Order</title>
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
-  <div>
-    <form id="passwordForm">
-      <input type="text" id="password" placeholder="Enter Password" required>
-      <button type="submit">Submit</button>
-    </form>
-    <div id="message">
-      THE FIRST STONE IS MOVED<br>
-      COPY THE FOLLOWING CODE AND SEND IT TO:<br>
-      marilynmansonrare@gmail.com<br>
-      IG: @marilynmansonrare
-    </div>
-    <div id="coordinates">26.6667N 80.0534W</div>
-  </div>
-  <script src="script.js"></script>
+<div class="container">
+    <h1>WELCOME TO THE CONGREGATION</h1>
+    <p>THE HIDDEN ORDER UNFOLDS ACROSS A YEAR-LONG RITUAL OF INITIATION WHERE ONLY THE MOST DEVOTED WILL UNCOVER THE FULL MESSAGE. EACH ISSUE CONTAINS FRAGMENTS OF A CODE HIDDEN ACROSS DIFFERENT MEDIUMS (TEXT, IMAGERY, AUDIO, WEB) THAT SLOWLY BUILDS TOWARDS A FINAL REVELATION.</p>
+    <input type="text" placeholder="ENTER CODE" onkeypress="handleKeyPress(event)">
+    <button onclick="handleSubmit()">SUBMIT</button>
+    <div id="result"></div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
